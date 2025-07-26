@@ -53,7 +53,7 @@ export default function Home() {
             <li>Meminta portabilitas data.</li>
             <li>Mengajukan keberatan atau keluhan atas penggunaan data.</li>
           </ul>
-          <p>Hubungi kami melalui: <a href="mailto:privacy@omniaai.id">privacy@omniaai.id</a></p>
+          <p>Hubungi kami melalui: <a href="mailto:hello@useomnia.ai">hello@useomnia.ai</a></p>
 
           <h2 className="text-xl font-bold mt-7 mb-2">5. Pihak Ketiga & Integrasi</h2>
           <p>Layanan Omnia AI dapat terhubung ke tools seperti WhatsApp API, Google Sheets, dan lainnya. Kami tidak menyimpan kredensial pihak ketiga Anda, dan hanya mengakses data yang diperlukan sesuai izin yang Anda berikan. <br/>
