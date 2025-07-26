@@ -21,7 +21,7 @@ export default function Home() {
           width={897}
           height={520}
         />
-        <div className="text-center lg:mt-[-7rem]">
+        <div className="text-center lg:mt-[-7rem] z-20">
           <p className="text-xl lg:text-[32px]">This is not a</p>
           <h2 className="text-6xl lg:text-[90px] font-bold leading-[1]">Chatbot</h2>
           <h5 className="text-xl lg:text-[42px]">but your second brain.</h5>
