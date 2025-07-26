@@ -24,3 +24,17 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg{
+  background-image: url('/images/bg.jpg'); /* ganti dengan path yang sesuai di /public */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.bg-page{
+  background-image: url('/images/bg-page.jpg'); /* ganti dengan path yang sesuai di /public */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
