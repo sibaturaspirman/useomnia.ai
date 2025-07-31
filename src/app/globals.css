@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import 'locomotive-scroll/dist/locomotive-scroll.css';
+
 
 :root {
   --background: #ffffff;
@@ -9,7 +11,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-space-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,10 +21,24 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden;
+}
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+#smooth-content {
+  will-change: transform;
 }
 
 .bg{
@@ -37,4 +53,28 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-attachment: fixed;
+}
+.bg-page2{
+  background-image: url('/images/bg-page2.jpg'); /* ganti dengan path yang sesuai di /public */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.circle1{
+  width: 248px;
+  height: 248px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  bottom: auto;
 }

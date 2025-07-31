@@ -1,19 +1,12 @@
 import Image from "next/image";
 import Link from 'next/link';
+import HeroSection from '@/components/HeroSection'
 
 export default function Home() {
   return (
-    <div className="font-mono bg">
-      <div className="fixed top-0 left-0 p-8 z-20">
-        <Image
-          src="/images/logo.png"
-          alt="omnia"
-          className="w-[150px]"
-          width={154}
-          height={56}
-        />
-      </div>
-      <main className="flex flex-col items-center justify-center min-h-screen">
+    <main className="font-mono">
+      <HeroSection />
+      {/* <main className="flex flex-col items-center justify-center min-h-screen">
         <Image
           src="/images/ai-employees.png"
           alt="omnia"
@@ -43,7 +36,7 @@ export default function Home() {
           Privacy Policy →
         </Link>
       </footer>
-      </main>
-    </div>
+      </main> */}
+    </main>
   );
 }

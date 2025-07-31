@@ -1,13 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 import "./globals.css";
+import SmoothScrollWrapper from '@/components/SmoothScrollWrapper'
+import Image from "next/image";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
+  weight: ['400', '700'],
   subsets: ["latin"],
 });
 
@@ -20,9 +18,21 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${spaceMono.variable} antialiased`}
       >
-        {children}
+        <div className="fixed top-0 left-0 p-3 lg:p-8 z-20">
+          <Image
+            src="/images/logo.png"
+            alt="omnia"
+            className="w-[125px] lg:w-[150px]"
+            width={154}
+            height={56}
+          />
+        </div>
+        {/* <div className="fixed top-0 left-0 w-full min-h-screen bg"></div> */}
+        {/* <SmoothScrollWrapper> */}
+          {children}
+        {/* </SmoothScrollWrapper> */}
       </body>
     </html>
   );
