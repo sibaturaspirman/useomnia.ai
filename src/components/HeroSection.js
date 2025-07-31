@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import ReactPlayer from 'react-player';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
@@ -30,6 +31,8 @@ export default function HeroSection() {
   const [activeIndex, setActiveIndex] = useState(0);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [isPlaying1, setIsPlaying1] = useState(false);
+  const [isPlaying2, setIsPlaying2] = useState(false);
 
 
   useEffect(() => {
@@ -606,7 +609,7 @@ export default function HeroSection() {
       {/* CTA */}
       <a href='https://wa.me/+6282123432400?text=Hallo saya mau tanya omniAi?' target='_blank' className='block fixed left-0 right-0 w-[200px] mx-auto bottom-1 z-50 transition hover:scale-[1.1] cursor-pointer' id='ctaContact'>
         <Image
-            src="/images/cta-contact.png"
+            src="/images/cta-cobain.png"
             alt="omnia"
             className="w-full animate-bounce"
             width={442}
@@ -1037,29 +1040,49 @@ export default function HeroSection() {
                     className="relative px-4"
                     >
                         <SwiperSlide className='lg:!w-[250px]'>
-                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => document.getElementById('videoSalon').play()}>
-                                <video
+                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => {
+                            setIsPlaying1(true);
+                            setIsPlaying2(false);
+                            }}>
+                                <Image
+                                src="/images/salon.jpg"
+                                alt="omnia"
+                                className={`w-full rounded-lg relative z-10 ${isPlaying1 ? 'opacity-0' : ''}`}
+                                width={208}
+                                height={369}
+                                />
+                                
+                                <ReactPlayer
                                 src="/videos/salon.mp4"
-                                poster="/images/salon.jpg"
-                                className="w-full h-full object-cover"
-                                loop
-                                playsInline
-                                preload="metadata"
-                                id="videoSalon"
+                                width="100%"
+                                height="100%"
+                                controls={false}
+                                playing={isPlaying1}
+                                className={`!absolute !top-0 !left-0 rounded-lg p-2 ${isPlaying1 ? '' : 'opacity-0'}`}
                                 />
                             </div>
                             <h5 className='text-xs lg:text-base text-center mt-3 font-bold'>Klinik Kecantikan</h5>
                         </SwiperSlide>
                         <SwiperSlide className='lg:!w-[250px]'>
-                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 mx-2 mr-4 transition-all hover:scale-[1.02]' onClick={() => document.getElementById('videoMaterial').play()}>
-                                <video
+                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => {
+                            setIsPlaying1(false);
+                            setIsPlaying2(true);
+                            }}>
+                                <Image
+                                src="/images/material.jpg"
+                                alt="omnia"
+                                className={`w-full rounded-lg relative z-10 ${isPlaying2 ? 'opacity-0' : ''}`}
+                                width={208}
+                                height={369}
+                                />
+                                
+                                <ReactPlayer
                                 src="/videos/material.mp4"
-                                poster="/images/material.jpg"
-                                className="w-full h-full object-cover"
-                                loop
-                                playsInline
-                                preload="metadata"
-                                id="videoMaterial"
+                                width="100%"
+                                height="100%"
+                                controls={false}
+                                playing={isPlaying2}
+                                className={`!absolute !top-0 !left-0 rounded-lg p-2 ${isPlaying2 ? '' : 'opacity-0'}`}
                                 />
                             </div>
                             <h5 className='text-xs lg:text-base text-center mt-3 font-bold'>Toko Material</h5>
@@ -1156,14 +1179,14 @@ export default function HeroSection() {
                     <div className="max-w-6xl text-xs lg:text-base mx-auto grid grid-cols-1 lg:grid-cols-3 items-center">
                         
                         {/* Left */}
-                        <div className="text-center lg:text-left lg:mb-2">
+                        <div className="text-center lg:text-left mb-2 lg:mb-0">
                         <a href="/privacy-policy" className="hover:underline tracking-widest">
                             KEBIJAKAN PRIVASI
                         </a>
                         </div>
 
                         {/* Center */}
-                        <div className="flex justify-center items-center space-x-4 lg:mb-2">
+                        <div className="flex justify-center items-center space-x-4 mb-2 lg:mb-0">
                         <a href="https://www.instagram.com/useomnia.ai/" target="_blank" rel="noopener noreferrer" className="hover:underline tracking-widest">
                             INSTAGRAM
                         </a>

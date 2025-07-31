@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="font-mono bg-page">
+    <div className="font-mono bg-page text-white">
        <Link href="/" className="fixed top-0 left-0 p-8 z-20">
         <Image
           src="/images/logo.png"
