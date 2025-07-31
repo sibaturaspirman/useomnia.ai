@@ -34,6 +34,16 @@ export default function HeroSection() {
   const [isPlaying1, setIsPlaying1] = useState(false);
   const [isPlaying2, setIsPlaying2] = useState(false);
 
+  const handleTogglePlay1 = () => {
+    setIsPlaying1((prev) => !prev);
+    setIsPlaying2(false)
+  };
+
+  const handleTogglePlay2 = () => {
+    setIsPlaying2((prev) => !prev);
+    setIsPlaying1(false)
+  };
+
 
   useEffect(() => {
     const isMobile = window.innerWidth < 1024; // asumsi breakpoint tailwind lg: 1024px
@@ -1034,16 +1044,13 @@ export default function HeroSection() {
                     slidesPerView={2}
                     breakpoints={{
                         768: {
-                        slidesPerView: 'auto',
+                            slidesPerView: 'auto',
                         },
                     }}
-                    className="relative px-4 w-full"
+                    className="mySwiper relative px-4 lg:w-auto mx-auto !flex !items-center !justify-center"
                     >
                         <SwiperSlide className='w-full lg:!w-[250px]'>
-                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => {
-                            setIsPlaying1(true);
-                            setIsPlaying2(false);
-                            }}>
+                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={handleTogglePlay1}>
                                 <Image
                                 src="/images/salon.jpg"
                                 alt="omnia"
@@ -1065,10 +1072,7 @@ export default function HeroSection() {
                             <h5 className='text-xs lg:text-base text-center mt-3 font-bold'>Klinik Kecantikan</h5>
                         </SwiperSlide>
                         <SwiperSlide className=' w-full lg:!w-[250px]'>
-                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => {
-                            setIsPlaying1(false);
-                            setIsPlaying2(true);
-                            }}>
+                            <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={handleTogglePlay2}>
                                 <Image
                                 src="/images/material.jpg"
                                 alt="omnia"
