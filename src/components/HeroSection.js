@@ -1094,7 +1094,7 @@ export default function HeroSection() {
             </section>
 
             {/* Section 9 */}
-            <section ref={section9Ref} id="section9" className="relative flex flex-col items-center justify-center  text-white min-h-screen pb-10">
+            <section ref={section9Ref} id="section9" className="relative flex flex-col items-center justify-center lg:justify-end text-white min-h-screen pb-10">
                 <div className="max-w-5xl mx-auto text-center mb-2 lg:mb-6 px-4" id='titleSection9'>
                     <h5 className="text-base lg:text-[32px] font-bold">Package Plan</h5>
                     <p className="text-xs lg:text-[24px]">Pilih paket yang sesuai dengan kebutuhan Anda</p>
@@ -1153,17 +1153,17 @@ export default function HeroSection() {
                 </div>
 
                 <footer className="text-white font-mono text-sm py-8 px-4 absolute bottom-4 left-0 right-0">
-                    <div className="max-w-6xl mx-auto grid grid-cols-3 items-center">
+                    <div className="max-w-6xl text-xs lg:text-base mx-auto grid grid-cols-1 lg:grid-cols-3 items-center">
                         
                         {/* Left */}
-                        <div className="text-left">
+                        <div className="text-center lg:text-left lg:mb-2">
                         <a href="/privacy-policy" className="hover:underline tracking-widest">
                             KEBIJAKAN PRIVASI
                         </a>
                         </div>
 
                         {/* Center */}
-                        <div className="flex justify-center items-center space-x-4">
+                        <div className="flex justify-center items-center space-x-4 lg:mb-2">
                         <a href="https://www.instagram.com/useomnia.ai/" target="_blank" rel="noopener noreferrer" className="hover:underline tracking-widest">
                             INSTAGRAM
                         </a>
@@ -1174,7 +1174,7 @@ export default function HeroSection() {
                         </div>
 
                         {/* Right */}
-                        <div className="text-right tracking-widest">
+                        <div className="text-center lg:text-right tracking-widest">
                         © 2025 ALL RIGHTS RESERVED
                         </div>
                     </div>
