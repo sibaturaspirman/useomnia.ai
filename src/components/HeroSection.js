@@ -1058,14 +1058,7 @@ export default function HeroSection() {
                                 height="100%"
                                 controls={false}
                                 playing={isPlaying1}
-                                playsinline
-                                config={{
-                                    file: {
-                                      attributes: {
-                                        playsInline: true, // ✅ ini yang efektif untuk mobile Safari
-                                      },
-                                    },
-                                }}
+                                playsInline
                                 className={`!absolute !top-0 !left-0 rounded-lg p-2 ${isPlaying1 ? '' : 'opacity-0'}`}
                                 />
                             </div>
@@ -1090,14 +1083,7 @@ export default function HeroSection() {
                                 height="100%"
                                 controls={false}
                                 playing={isPlaying2}
-                                playsinline
-                                config={{
-                                    file: {
-                                      attributes: {
-                                        playsInline: true, // ✅ ini yang efektif untuk mobile Safari
-                                      },
-                                    },
-                                }}
+                                playsInline
                                 className={`!absolute !top-0 !left-0 rounded-lg p-2 ${isPlaying2 ? '' : 'opacity-0'}`}
                                 />
                             </div>
