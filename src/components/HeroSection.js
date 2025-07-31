@@ -1028,7 +1028,7 @@ export default function HeroSection() {
                     </h2>
                 </div>
 
-                <div className='max-w-5xl relative mx-auto' id='sliderSection7'>
+                <div className='w-full lg:max-w-5xl relative mx-auto' id='sliderSection7'>
                 <Swiper
                     spaceBetween={0}
                     slidesPerView={2}
@@ -1037,9 +1037,9 @@ export default function HeroSection() {
                         slidesPerView: 'auto',
                         },
                     }}
-                    className="relative px-4"
+                    className="relative px-4 w-full"
                     >
-                        <SwiperSlide className='lg:!w-[250px]'>
+                        <SwiperSlide className='w-full lg:!w-[250px]'>
                             <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => {
                             setIsPlaying1(true);
                             setIsPlaying2(false);
@@ -1058,12 +1058,20 @@ export default function HeroSection() {
                                 height="100%"
                                 controls={false}
                                 playing={isPlaying1}
+                                playsinline
+                                config={{
+                                    file: {
+                                      attributes: {
+                                        playsInline: true, // ✅ ini yang efektif untuk mobile Safari
+                                      },
+                                    },
+                                }}
                                 className={`!absolute !top-0 !left-0 rounded-lg p-2 ${isPlaying1 ? '' : 'opacity-0'}`}
                                 />
                             </div>
                             <h5 className='text-xs lg:text-base text-center mt-3 font-bold'>Klinik Kecantikan</h5>
                         </SwiperSlide>
-                        <SwiperSlide className='lg:!w-[250px]'>
+                        <SwiperSlide className=' w-full lg:!w-[250px]'>
                             <div className='relative bg-[#1a1a1a] rounded-xl p-2 text-center shadow-lg border border-orange-500 cursor-pointer my-3 ml-4 mx-2 transition-all hover:scale-[1.02]' onClick={() => {
                             setIsPlaying1(false);
                             setIsPlaying2(true);
@@ -1082,6 +1090,14 @@ export default function HeroSection() {
                                 height="100%"
                                 controls={false}
                                 playing={isPlaying2}
+                                playsinline
+                                config={{
+                                    file: {
+                                      attributes: {
+                                        playsInline: true, // ✅ ini yang efektif untuk mobile Safari
+                                      },
+                                    },
+                                }}
                                 className={`!absolute !top-0 !left-0 rounded-lg p-2 ${isPlaying2 ? '' : 'opacity-0'}`}
                                 />
                             </div>
