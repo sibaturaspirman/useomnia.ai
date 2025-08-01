@@ -820,6 +820,16 @@ export default function HeroSection() {
                 <h2 className="text-4xl lg:text-[90px] font-bold leading-[1.5]">AI Employee</h2>
                 <h5 className="text-xl lg:text-[42px]">yang bisa bekerja 24/7</h5>
                 </div>
+
+                <div className='absolute mx-auto w-[145px] bottom-[9rem] lg:bottom-[10rem] animate-bounce'>
+                    <Image
+                    src="/images/scroll.png"
+                    alt="omnia"
+                    className="w-full"
+                    width={149}
+                    height={18}
+                    />
+                </div>
             </div>
 
             {/* SECTION 2 */}
