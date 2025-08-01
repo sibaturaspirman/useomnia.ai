@@ -477,33 +477,33 @@ export default function HeroSection() {
 
 
     // SECTION 8
-    const titles8 = document.getElementById('titleSection8');
-    const kontenSection8 = document.getElementById('kontenSection8');
-    if (section8Ref.current) {
-        const tlSection8 = gsap.timeline({
-        scrollTrigger: {
-            trigger: section8Ref.current,
-            start: 'top center',
-            end: 'bottom center',
-            toggleActions: 'play none none reverse',
-            markers: false,
-            scrub: false,
-        },
-        });
+    // const titles8 = document.getElementById('titleSection8');
+    // const kontenSection8 = document.getElementById('kontenSection8');
+    // if (section8Ref.current) {
+    //     const tlSection8 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: section8Ref.current,
+    //         start: 'top center',
+    //         end: 'bottom center',
+    //         toggleActions: 'play none none reverse',
+    //         markers: false,
+    //         scrub: false,
+    //     },
+    //     });
     
-        tlSection8
-        .fromTo(
-            titles8,
-            { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
-        )
-        .fromTo(
-            kontenSection8,
-            { opacity: 0, y: 40 },
-            { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
-            "+=0.05"
-        );
-    }
+    //     tlSection8
+    //     .fromTo(
+    //         titles8,
+    //         { opacity: 0, y: 40 },
+    //         { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }
+    //     )
+    //     .fromTo(
+    //         kontenSection8,
+    //         { opacity: 0, y: 40 },
+    //         { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' },
+    //         "+=0.05"
+    //     );
+    // }
     // !SECTION 8
 
 
@@ -706,7 +706,7 @@ export default function HeroSection() {
                 />
                 <div className='relative w-full'>
                     <h5 className="text-xl lg:text-[48px] font-bold mt-2 lg:mt-0 text-[#FFD4C2] opacity-0" id='apaItu4'>Merespon sesuai kebutuhan</h5>
-                    <h5 className="absolute top-0 w-full text-xl lg:text-[48px] font-bold mt-2 lg:mt-0 text-[#FFD4C2] opacity-0" id='apaItu5'>Menggunakan semua aplikasi</h5>
+                    <h5 className="absolute top-0 w-full text-xl lg:text-[48px] font-bold mt-2 lg:mt-0 text-[#FFD4C2] opacity-0" id='apaItu5'>Integrasi ke semua aplikasi</h5>
                     <h5 className="absolute top-0 w-full text-xl lg:text-[48px] font-bold mt-2 lg:mt-0 text-[#FFD4C2] opacity-0" id='apaItu6'>Mengerjakan tugas</h5>
                 </div>
 
@@ -1098,7 +1098,7 @@ export default function HeroSection() {
             </section>
 
             {/* Section 8 */}
-            <section ref={section8Ref} id="section8" className="relative flex flex-col items-center justify-center lg:justify-end text-white min-h-screen">
+            {/* <section ref={section8Ref} id="section8" className="relative flex flex-col items-center justify-center lg:justify-end text-white min-h-screen">
                 <div className="max-w-5xl mx-auto text-center mb-2 lg:mb-6 px-4" id='titleSection8'>
                     <h5 className="text-base lg:text-[32px] font-bold">Bagaimana cara setup?</h5>
                     <p className="text-xs lg:text-[24px]">Proses simple untuk transformasi bisnis Anda</p>
@@ -1120,7 +1120,7 @@ export default function HeroSection() {
                     height={503}
                     />
                 </div>
-            </section>
+            </section> */}
 
             {/* Section 9 */}
             <section ref={section9Ref} id="section9" className="relative flex flex-col items-center justify-center lg:justify-end text-white min-h-screen pb-10">
