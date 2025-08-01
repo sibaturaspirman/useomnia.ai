@@ -696,7 +696,7 @@ export default function HeroSection() {
 
             <div className="w-full text-center text-white absolute px-5 lg:px-0 opacity-100 lg:mt-[-4rem]">
                 <h5 className="text-base lg:text-[32px] font-bold mt-2 lg:mt-0 opacity-0" id='apaItu1'>Apa itu AI Employee?</h5>
-                <p className="text-base lg:text-[24px] opacity-0" id='apaItu2'>Ia bekerja sebagai karyawan kamu yang bisa</p>
+                <p className="text-base lg:text-[24px] opacity-0" id='apaItu2'>Ia bekerja sebagai karyawan kamu yang&nbsp;bisa</p>
                 <Image
                 src="/images/divider.png"
                 alt="omnia"
